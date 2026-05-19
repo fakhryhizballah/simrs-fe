@@ -9,7 +9,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Ambil token dari cookie
-  const token = request.cookies.get('authToken')?.value;
+  const token = request.cookies.get('token')?.value;
   
   // Jika mengakses halaman login dan sudah terautentikasi, redirect ke dashboard
   if (authRoutes.includes(pathname) && token) {
